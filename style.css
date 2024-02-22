@@ -1,0 +1,1054 @@
+/*
+File: styles.css
+Purpose: This CSS file provides styles for the layout and appearance of the associated HTML index.html file.
+Author: Marcel Feiler
+Date: 10.04.2021
+*/
+
+/*currently set values to important attributes*/
+
+* {
+	box-sizing: border-box;
+	scroll-padding-top:80px;
+}
+
+body {
+	margin-left: 0px; 
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	min-width: 100%;
+	width: 100%;
+	background-color: #F1E4E1;
+	font-family: 'Titillium Web', sans-serif;
+	height: 100vh;
+	overflow: hidden;
+}
+
+/* Help container for creating a smooth scrolling */
+
+.container {
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll; /* Scrollbar appear again after */
+	scroll-behavior: smooth;
+}
+
+/* Default set of a link */
+
+a {
+	text-decoration: none;
+}
+
+a:link, a:visited, a:active {
+	text-decoration: none;
+	color: black;
+}
+
+/* To delete list marker in each case */
+
+ul {
+	list-style-type: none;
+}
+
+
+/*
+*
+* New section - NAVIGATION
+*
+*/
+
+
+#navigation {
+	background-color: #F89278; 
+	position: absolute; /* Let nav be always on the top after scrolling */
+	top: 0;
+	z-index: 1;
+	width: 100%;
+}
+
+
+
+#nav-logo {
+	display: inline-block; /* to display also logo inline other li items */
+	font-family: 'Dancing Script', cursive;
+	font-weight: bold;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 40px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-transform: none;
+}
+
+#nav-logo a:hover {
+	font-weight: bolder;
+	color: #167FB7;
+	transition: 1s;
+}
+
+#nav-menu {
+	text-align: center;
+	float: left;
+	vertical-align: middle;
+	width: 100%;
+	font-size: 25px;
+}
+
+
+
+#nav-menu ul {
+	margin-top: 0px; /* resize default ul in order to correct view */
+	margin-bottom: 0px; /* resize default ul in order to correct view */
+	padding-left: 0px;
+}
+
+#nav-menu li {
+	display: inline; /* correct displaying inside of nav */
+	text-transform: uppercase;
+	font-weight: bold;
+	padding-right: 30px; /* graphical space between menu items */
+ 	padding-left: 30px; /* graphical space between menu items */
+	position: relative;
+	width: 150px;
+}
+
+#nav-menu a:hover {
+	color: #167FB7;
+	transition: 1s;
+}
+
+.container .toggler {
+	display: none; /* to graphically hide toggler */
+}
+
+
+/*
+#nav-menu li:nth-child(6) ul {
+	display: none;
+}*/
+
+/*#nav-menu li:nth-child(6):checked ~ #nav-menu li:nth-child(6) ul {
+	display: block;
+}*/
+
+
+
+.sub-menu {
+	display: none;
+	position: relative;
+}
+
+.sub-menu li {
+	position: relative;
+}
+
+#na-menu ul {
+	position: relative;
+}
+
+#nav-menu ul li:hover .sub-menu {
+	display: block;
+	position: absolute;
+	background: rgba(248, 146, 120, 0.4);
+	margin-top: -25px;
+	left: 0%;
+	margin-left: -5px;
+}
+
+#nav-menu ul li:hover .sub-menu ul {
+	display: block;
+	margin: 10px;
+	
+}
+
+#nav-menu ul li:hover .sub-menu ul li {
+	width: auto;
+	padding: 10px;
+	border-bottom: 1px;
+	display: block;
+	
+}
+
+
+/*
+#nav-menu ul li ul {
+	visibility: hidden;
+	opacity: 0;
+	position: absolute;
+	left:-999em;
+	transition: all 0.5 ease;
+	margin-top: -20px;
+	left: 70%;
+	display: none;
+}
+
+
+#menu li:hover ul, #menu li li:hover ul,
+#menu li li li:hover ul, #menu li.sfhover ul,
+#topwctopdropnav li li.sfhover ul,
+#topwctopdropnav li li li.sfhover ul{
+  left: auto;
+}
+
+
+
+
+
+#nav-menu ul li ul li {
+	display: block;
+	position: relative;
+	left: 0;
+}
+
+#nav-menu ul li:hover > ul,
+#nav-menu ul li ul:hover {
+	visibility: visible;
+	opacity: 1;
+	display: block;
+	z-index: 2;
+	background-color: rgba(248, 146, 120, 0.4);
+}*/
+
+/*
+*
+* New section - HEADER
+*
+*/
+
+
+#header {
+	height: 600px; /* after styling of h2 move #header h2 to middle */
+	background-image: url("img/intro.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed; /* not change picture after scrolling effect */
+	background-position: center;
+	background-size: cover;
+}
+
+#header h2 { 
+	position: relative;
+	top: 45%;
+	left: 37%;
+	width: 30%; /* resize in order to delete horizontal scrollbar */
+	font-size: 50px;
+	font-family: 'Dancing Script', bold;
+	color: #C0A31D;
+	background: rgba(108, 114, 114, 0.75); 
+	background-repeat: no-repeat;
+	background-position: center;
+	text-align: center;
+	border-radius: 25px;
+	padding: 25px 25px 25px 25px;
+
+
+}
+
+
+/*
+*
+* New section - ABOUT
+*
+*/
+
+
+#about { /* default margin for #about section */
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+#about h2 {
+	text-align: center;
+	font-size: 40px;
+	border-top: solid 1px #ADA7AC;
+	border-bottom: solid 1px #ADA7AC;
+}
+
+#about {
+	display: block; /* display about item to another rows, not inline */
+}
+
+
+#about p {
+	text-align: left;
+	font-size: 25px;
+}
+
+#about h3 {
+	text-align: center;
+	font-size: 30px;
+	margin-top: 0px;
+}
+
+.gallery {
+	text-align: center;
+	padding-bottom: 20px; /* space between text and picture in #about section */
+}
+
+img.gallery_pic {
+	max-width: 100%;
+	vertical-align: top;
+	padding-bottom: 20px;
+}
+
+
+/*
+*
+* New section - EDUCATION
+*
+*/
+
+
+#education { /* default margin in #education section */
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+#education h2 {
+	font-size: 40px;
+	text-align: center;
+	border-top: solid 1px #ADA7AC;
+	border-bottom: solid 1px #ADA7AC;
+}
+
+.education-item {
+	display: block; /* to display items to line by line style */
+	padding-top: 40px;
+	vertical-align: middle;
+	width: 100%;
+}
+
+
+.education-subitem:nth-child(odd) {
+	display: inline-block; /* to display subitems picture and text to one line */
+	width: 65%; /* to set width of text item to 2/3 */
+	height: 100%;
+	text-align:center;
+	vertical-align: top;
+	font-size: 25px;
+	padding-right: 20px; /* to space between text and its div border line */
+	border-right: solid 3px #CFD6E7;
+	border-top: solid 3px #CFD6E7;
+}
+
+.education-subitem:nth-child(odd) h3 {
+	font-size: 30px;
+	margin-top: 0px; /* to delete default h3 margin-top */
+}
+
+.education-subitem:nth-child(even) {
+	display: inline-block; /* to display subitems picture and text to one line */
+	width: 65%; /* to set width of text item to 2/3 */
+	height: 100%;
+	text-align:center;
+	vertical-align: top;
+	font-size: 25px;
+	padding-left: 20px; /* to space between text and its div border line */
+	border-left: solid 3px #CFD6E7;
+	border-bottom: solid 3px #CFD6E7;
+}
+
+.education-subitem:nth-child(even) h3 {
+	font-size: 30px;
+	margin-top: 0px; /* to delete default h3 margin-top */
+}
+
+.education-image:nth-child(even) {
+	display: inline-block; /* to display img in line line with text */
+	width: 30%; /* to graphically divide into 1/3 */
+	padding-left: 20px; /* to space between img and text div border line */
+	 
+}
+
+.education-image:nth-child(odd) {
+	display: inline-block; /* to display img in line line with text */
+	width: 30%; /* to graphically divide into 1/3 */
+	padding-right: 20px; /* to space between img and text div border line */
+}
+
+.education-image:nth-child(odd) img {
+	width: 100%;
+	height: auto;
+	float: left;
+}
+
+.education-image:nth-child(even) img {
+	width: 100%;
+	height: auto;
+	float: right;
+}
+
+
+/*
+*
+* New section - INTERESTS
+*
+*/
+
+
+#interests { /* to margin between this and other bordering sections */
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+#interests h2 {
+	font-size: 40px;
+	text-align: center;
+	border-top: solid 1px #ADA7AC;
+	border-bottom: solid 1px #ADA7AC;
+}
+
+#interests h3 {
+	margin-top: 0px; /* to delete default h3 margin-top value */
+	text-align: center;
+	font-size: 30px;
+}
+
+.interests-item {
+	display: inline-block; /* to display inline (in case of computer screen) */
+	width: 32%; /* to set width of each item to 1/3 for correct view */
+	margin-bottom: 20px; /* graphical space between image and its description */
+	font-size: 25px;
+  	margin: auto;
+}
+
+.interests-item img {
+	width: 100%;
+	height: 60%;
+}
+
+.interests-pics-cover {
+	position: relative; /* to correctly place arrows in picture */
+	margin: auto;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute; /* to place arrows inside of img */
+  top: 37%; /* to place arrows in middle part of img */
+  width: auto;
+  padding: 16px; /* to not place arrows in edge of img */
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0; /* to make a rounded border of array border */
+  user-select: none;
+}
+
+.next {
+  right: 0; /* to set next button on right side */
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+
+/*
+*
+* New section - ABILITIES
+*
+*/
+
+
+#abilities { /* to margin between this and bordering sections */
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+#abilities h2 {
+	font-size: 40px;
+	text-align: center;
+	border-top: solid 1px #ADA7AC;
+	border-bottom: solid 1px #ADA7AC;
+	text-align: center;
+}
+
+#abilities h3 {
+	font-size: 30px;
+	text-align: center;
+}
+
+.abilities-item {
+	display: block;
+	border-bottom: solid 1px #C75F17;
+}
+
+.abilities-subitem:nth-child(odd) {
+	display: inline-block; /* to display items into columns */
+	text-align: left;
+	width: 49%; /* to create a column display */
+	font-size: 27px;
+	line-height: 40px;
+	padding-left: 15px; /* to vertical space items */
+}
+
+.abilities-subitem:nth-child(even) {
+	display: inline-block;
+	text-align: left;
+	width: 49%;
+	font-size: 27px;
+	line-height: 40px;
+	padding-right: 15px; /* to vertical space items */
+}
+
+.abilities-subitem ul {
+	padding-left: 0px; /* to pre-set default padding-left of ul to 0 */
+}
+
+
+span.grouped-stars {
+	float: right; /* to place star ranking to right */
+}
+
+.star{
+	line-height: 1;
+}
+
+.star:before {
+	content: "\2605"; /* code for showing a star */
+}
+
+.grouped-stars:hover {
+	content: "\2605"; /* code for showing a star */
+	font-size: 32px;
+	transition: all 0.3s;
+}
+
+.star.filled{
+	color: #33ffff;
+}
+
+
+/*
+*
+* New section - CONTACT
+*
+*/
+
+
+#contact {
+	padding-right: 20px; /* space near edge because of full width of bg */
+	padding-left: 20px; /* space near edge because of full width of bg */
+	margin-top: 40px;
+	margin-left: 0px; /* because of full width of bg */
+	margin-right: 0px; /* because of full width of bg */
+	background-color: #040A1A;
+	text-align: center;
+	color: #DDAF8E;
+	padding-bottom: 60px; /* to make a graphical space between bottom part of div (icons) and footer_note */
+}
+
+#contact h3 {
+	font-size: 30px;
+	font-family: 'Caveat', cursive;
+	font-weight: normal;
+}
+
+#contact h2 {
+	font-size: 40px;
+	text-align: center;
+	border-top: solid 1px #ADA7AC;
+	border-bottom: solid 1px #ADA7AC;
+	text-align: center;	
+}
+
+#contact a {
+	color: #DDAF8E;
+	text-transform: uppercase;
+	font-weight: bold; 
+	font-size: 25px;
+	vertical-align: middle;
+}
+
+#contact a:hover {
+	color: #11AEB9;
+}
+
+#contact ul {
+	display: block;
+}
+
+#contact li {
+	display: inline-block;
+}
+
+.contact-icons { /* to set non-original (smaller) size of icons */
+	height: 20%;
+	width: 20%;
+	vertical-align: middle;
+}
+
+.contact-icons:hover {
+	opacity: 0.5;
+	transition: 0.5s;
+}
+
+
+/*
+*
+* New section - FOOTER_NOTE
+*
+*/
+
+
+#footer_note {
+	padding-right: 20px; /* space near edge because of full width of bg */
+	padding-left: 20px; /* space near edge because of full width of bg */
+	margin-left: 0px; /* because of full width of bg */
+	margin-right: 0px; /* because of full width of bg */
+	background-color: #6C7272;
+}
+
+#footer_note p {
+	margin-bottom: 0; /* to prevent from make a white place on bottom of site */
+	margin-top: 0; /* to prevent from make a white place on top of site */
+	padding-top: 10px; /* make a free space between border an text */
+	padding-bottom: 10px; /* make a free space between border an text */
+	color: #040A1A;
+}
+
+
+
+
+/*
+*
+*
+* Media part - part for RESPONSIVE DESIGN AND LAYOUT SOLUTION
+*		LARGE SCREENS 
+*
+*
+*/
+
+
+
+
+@media only screen and (min-width: 1366px) { /* to make a nice free space between edge and content in case of large screen */
+	section#about{
+		padding-left: 20%;
+		padding-right: 20%
+	}
+
+	section#education{
+		padding-left: 20%;
+		padding-right: 20%
+	}
+
+	section#interests{
+		padding-left: 20%;
+		padding-right: 20%
+	}
+
+	section#abilities{
+		padding-left: 20%;
+		padding-right: 20%
+	}
+
+
+}
+
+
+
+
+/*
+*
+*
+* Media part - part for RESPONSIVE DESIGN AND LAYOUT SOLUTION
+*		MOBILE SCREENS 
+*
+*
+*/
+
+
+
+
+@media only screen and (max-width: 768px) {
+	*{box-sizing: inherit;}
+
+	#nav-menu ul li:hover .sub-menu {
+	display: block;
+	position: absolute;
+	background: rgba(0, 39, 51, 0.85);
+	margin-top: -112px; /* for better view realisation of local menu */
+	margin-left: 150px;
+}
+
+	/*
+	*
+	* Burger creation
+	*
+	*/
+
+	.container .toggler {
+		position: fixed; /* to permanent position */
+		top: 0; /* user friendly position */
+		left: 0; /* user friendly position */
+		z-index: 2; /* to allow to click on toggler */
+		cursor: pointer;
+		width: 50px; /* to resize toggler */
+		height: 50px;
+		margin-left: 20px;
+		opacity: 0; /* to make toggler invisible from current state */
+		display: table-cell;
+	}
+
+	.container .hamburger {
+		position: fixed;
+		top: 0; /* positioning of graphical burger */
+		left: 0;
+		z-index: 1; /* to make hamburger always seen on the top */
+		width: 60px;
+		height: 60px;
+		padding-left: 20px;
+		background: inherit;
+		display: flex; /* correct displaying of hamburger */
+		align-items: center;
+		justify-content: center;
+	}
+
+
+	
+	.container .hamburger > div { /* hamburger code*/
+		position: relative;
+		width: 100%;
+		height: 2px;
+		background-color: #C0A31D;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all 0.4s ease;
+	}
+
+	
+	.container .hamburger > div:before,
+	.container .hamburger > div:after { /* top and bottom of hamburger */
+		content: '';
+		position: absolute;
+		z-index: 1; /* to be always visible even though there is bg */
+		top: -10px; /* to place line of burger above first-created line */
+		width: 100%;
+		height: 2px;
+		background: inherit;
+	}
+
+	
+	.container .hamburger > div:after { /* to move line down */
+		top: 10px; /* to place line of burger under first-created line */
+	}
+
+	
+	.container .toggler:checked + .hamburger > div { /* toggler animate */
+		transform: rotate(135deg);
+	}
+
+	
+	.container .toggler:checked + .hamburger > div:before,
+	.container .toggler:checked + .hamburger > div:after { /* to turn lines into x direct */
+		top: 0;
+		transform: rotate(90deg);
+	}
+
+	
+	.container .toggler:checked:hover + .hamburger > div { /*while checked rotate on hover*/
+		transform: rotate(225deg);
+	}
+
+	.container #nav-menu li {
+		display: block;
+	}
+
+	.container #nav-menu li:nth-child(4) {
+		text-align: center;
+	}
+
+
+
+	
+	.container .toggler:checked ~ #nav-menu { /* while menu is shown */
+		visibility: visible; /* will be shown menu items */
+	}
+
+	.container .toggler:checked ~ #nav-menu > div {
+		transform: scale(1); /* will display menu in correct size */
+		transition-duration: 0.75s;
+	}
+
+	.container .toggler:checked ~ #nav-menu > div > div {
+		opacity: 1;
+		transition: opacity 0.4s ease;
+	}
+
+	.container #nav-menu {
+		position: fixed; 
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		visibility: hidden;
+		overflow: hidden; /* to hide for now unwanted menu items */
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.container #nav-menu > div {
+		background: rgba(0, 39, 51, 0.85);
+		border-radius: 50%; /* to make a circle effect */
+		width: 200vw;
+		height: 200vw;
+		display: flex; /* to display in fron of user */
+		flex: none; /* to curve border item to round */
+		align-items: center;
+		justify-content: center;
+		transform: scale(0);
+		transition: all 0.4s ease;
+	}
+
+	.container #nav-menu > div > div {
+		text-align: center;
+		max-width: 90vw;
+		max-height: 100vh;
+		opacity: 0;
+		transition: opacity 0.4s ease;
+	}
+
+	.container #nav-menu > div > div > ul > li {
+		color: #fff;
+		font-size: 1.5rem;
+		padding: 1rem;
+	}
+
+	.container #nav-menu > div > div > ul > li a {
+		color: inherit;
+		transition: color 0.4s ease;
+	}
+
+
+	/*
+	*
+	* Content of body
+	*
+	*/
+	
+
+	#header {
+		width: 100%;
+		margin-top: -50px; /* to delete a white space above header image */
+	}
+
+
+
+	#header h2 {
+		padding: 25px 25px 25px 25px;
+		text-align: center;
+		top: 35%; /* to move header headline to almost middle */
+		left: 30%;
+		width: 35%; /* to avoid using of horizontal scrollbar */
+		font-size: 40px;
+
+	}
+
+
+	.education-item {
+		width: 100%;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	.education-subitem:nth-child(even) {
+		display: block; /* new layout - display line by line instead of img-text one line */
+		width: auto;
+		border-bottom: solid 3px #CFD6E7;
+		border-top: solid 3px #CFD6E7;
+		border-left: solid 3px #CFD6E7;
+		border-right: solid 3px #CFD6E7;
+		text-align: center; 
+		padding-left: 0px;
+		padding-bottom: 20px;
+	}
+
+	.education-subitem:nth-child(odd) {
+		display: block; /* new layout - display line by line instead of img-text one line */
+		width: auto;
+		border-bottom: solid 3px #CFD6E7;
+		border-top: solid 3px #CFD6E7;
+		border-left: solid 3px #CFD6E7;
+		border-right: solid 3px #CFD6E7;
+		text-align: center;
+		padding-right: 0px;
+		padding-bottom: 20px;
+	}
+
+
+	.education-image:nth-child(even) {
+		display: inline-block;
+		width: auto;
+		text-align: center;
+		padding-left: 0px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	 
+	}
+
+	.education-image:nth-child(odd) {
+		display: inline-block;
+		width: auto;
+		text-align: center;
+		padding-right: 0px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	.interests-item {
+		display: block;
+		width: 100%;
+		text-align: center;
+		position: relative;
+	}
+
+	.prev {
+		left: 0;
+	}
+
+	.abilities-subitem:nth-child(even) {
+		display: initial; /* new layout - display each item of abilities line by line instead of inline */
+		padding-right: 0px;	
+	}
+
+	.abilities-subitem:nth-child(odd) {
+		display: initial; /* new layout - display each item of abilities line by line instead of inline */
+		padding-left: 0px; 
+	}
+
+	.abilities-text {
+		font-size: 20px;
+	}
+
+
+	div.contact-item{
+		display: block; /* new layout - display each item (icons mainly) in contact line by line instead of inline */
+	}
+
+
+	#contact {
+		text-align: left;
+		padding-bottom: 20px;
+	}
+
+	#contact h3 {
+		text-align: center;
+	}
+
+	#contact ul {
+		padding-left: 35%;
+	}
+
+	#contact li {
+		display: block; /* display to block instead of inline */
+		padding-bottom: 20px;
+	}
+
+	.contact-icons { /* more friendly size of icons */
+		height: 15%; 
+		width: 15%;
+		text-align: left;
+	}
+
+	#contact a {
+		text-align: left;
+	}
+
+
+}
+
+
+@media only screen and (max-width: 425px) { /* fixed font-size in order to correctly display stars inline on mobile device */
+	#nav-menu ul li:hover .sub-menu {
+	display: block;
+	position: absolute;
+	background: rgba(0, 39, 51, 0.85);
+	margin-top: -90px;
+	margin-left: 150px;
+	font-size: 15px;
+	padding: 0px;
+	}
+
+	div.submenu li{
+		font-size: 15px;
+	}
+
+	div > ul > li > ul {
+		font-size: 15px;
+
+	}
+
+	.grouped-stars {
+		font-size: 20px;
+	}	
+
+	.grouped-stars:hover {
+		font-size: 23px;
+	}
+
+	#contact ul {
+		padding-left: 25%;
+	}
+
+
+}
+
+@media (min-width: 769px) and (max-width: 1024px) { /* fixed font-size in order to correctly display stars inline on laptop */
+	#nav-menu li {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	#nav-menu a {
+		font-size: 20px;
+	}
+
+	#nav-menu li:nth-child(4) a {
+		font-size: 35px;
+	}
+
+	#header h2 {
+		top: 30%;
+	}
+
+	#contact a {
+		font-size: 20px;
+	}
+
+	#nav-menu ul li:hover .sub-menu {
+	display: block;
+	position: absolute;
+	background: rgba(248, 146, 120, 0.4);
+	margin-top: -25px;
+	margin-left: -20px;
+	}
+}
+
+
+
+/*
+*
+*
+* END OF CSS STYLING.
+*
+*
+*/
+
+
+
+

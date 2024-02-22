@@ -1,0 +1,714 @@
+<!--
+File: index.html
+Purpose: Main page
+Author: Marcel Feiler
+Date: 10.04.2021
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Marcel Feiler</title>
+	<link rel="shortcut icon" type="image/jpg" href="img/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width, initial scale=1.0">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Titillium+Web:wght@300&family=Caveat&display=swap" rel="stylesheet">
+	<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+
+	
+
+</head>
+
+<body>
+<div class="container">
+	<nav id="navigation">
+		<div class="content">
+
+			<input type="checkbox" class="toggler">
+			<div class="hamburger"><div></div></div>
+
+			<div id="nav-menu">
+				<div>
+					<div>
+						<ul>
+							<li>
+								<a href="index.html#header">Home</a>
+							</li>
+							<li>
+								<a href="index.html#about">About</a>
+							</li>
+							<li>
+								<a href="index.html#education">Education</a>
+							</li>
+					
+							<li>
+								<div id="nav-logo">
+									<div>
+										<a href="index.html">Marcel Feiler</a>
+									</div>
+								</div>
+							<li>
+
+								<a href="index.html#interests">Interests</a>
+							</li>
+							<li>
+								<a href="index.html#abilities">Abilities</a>
+								
+								<div class="sub-menu">
+									<ul>
+										<li id="SkillsLoc"><a href="index.html#Skills">Skills</a></li>
+										<li id="LanguagesLoc"><a href="index.html#Languages">Languages</a></li>
+										<li id="ToolsLoc"><a href="index.html#Tools">Tools</a></li>
+									</ul>
+								</div>
+								
+							</li>
+							<li>
+								<a href="index.html#contact">Contact</a>
+							</li>
+						</ul>
+					</div>
+				</div>		
+			</div>
+
+
+		</div>
+	</nav>	
+
+
+
+
+	<header id="header">
+		<div class="content">
+			<div class="intro"></div>
+		</div>
+		<h2>Student of FIT VUT Brno</h2>
+	</header>
+
+
+
+
+	<section id="about">
+		<div class="content">
+			<h2>About</h2>
+
+			
+				
+			
+
+		<div class="gallery">
+			<img class="gallery_pic" src="img/5.jpg" alt="Student Pic">
+			<h3>My story</h3>
+				<p>
+	Vestibulum semper semper posuere. In leo nulla, blandit vulputate eleifend quis, efficitur ornare quam. Cras maximus laoreet metus id tincidunt. Integer pharetra risus et consectetur ullamcorper. Duis eleifend risus at massa aliquet, semper scelerisque sem vulputate.
+
+				<p>
+	Vestibulum semper semper posuere. In leo nulla, blandit vulputate eleifend quis, efficitur ornare quam.Aenean nec sagittis turpis, nec posuere ante. Maecenas ac dui enim. Ut in nisi mauris. Aliquam quis odio a nunc interdum rutrum. Sed varius scelerisque nulla ac efficitur.
+				</p>
+		</div>
+
+			<script>
+				let images_array = [
+					"img/5.jpg",
+					"img/2.jpg",
+					"img/1.jpg"
+				]	
+
+				let pic = $('.gallery_pic');
+				let i = 0;
+				setInterval(function() {
+
+					i = (i + 1) % images_array.length
+
+					$(document).ready(function(){
+						pic.fadeOut(1000, () => {
+							pic.attr("src", images_array[i]);
+						pic.fadeIn(1000);
+						});
+					});
+				},
+			3000)	
+			</script>
+			
+
+
+
+
+		</div>
+	</section>
+
+
+
+
+	<section id="education">
+		<div class="content">
+			<h2>Education</h2>
+
+			<div class="education-item">
+				<div class="education-image">
+					<img src="img/3.jpg" alt="High School">
+				</div>
+
+				<div class="education-subitem">
+				<h3>Gymnázium Dubnica nad Váhom</h3>	
+				<p>Morbi maximus eros nec ligula rutrum, quis dignissim odio viverra. Pellentesque at tincidunt eros. Nam diam lacus, porta eu arcu ut, pulvinar feugiat lorem. Nullam venenatis lectus eu enim pellentesque, vel congue dui pretium.</p>
+				</div>
+			</div>
+
+			<div class="education-item">
+
+				<div class="education-subitem">
+				<h3>FIT VUT Brno</h3>
+				<p>In pharetra laoreet blandit. Pellentesque lobortis, neque vitae facilisis congue, metus mauris pulvinar velit, ut lobortis augue purus vitae orci. Integer vestibulum ligula vitae rhoncus bibendum. Maecenas tempor lorem velit, id aliquam enim porta in.</p>	
+				</div>
+
+				<div class="education-image">
+					<img src="img/4.jpg" alt="University">
+				</div>
+			</div>
+
+			<div class="education-item">
+				<div class="education-image">
+					<img src="img/6.jpg" alt="Udemy">
+				</div>
+
+				<div class="education-subitem">
+				<h3>Udemy educational IT courses</h3>
+				<p>Pellentesque mollis turpis ut congue ultricies. In nec dui dapibus, pulvinar odio quis, sodales est. Mauris molestie aliquet ex sed placerat. Sed non ipsum enim.</p>
+				</div>
+				
+			</div>
+
+
+
+
+
+		</div>
+	</section>
+
+
+
+
+	<section id="interests">
+		<div class="content">
+			<h2>Interests</h2>
+
+
+
+			<div class="interests-item">
+				<h3>Volunteering</h3>
+				<div class="interests-pics-cover">
+					<div class="pics1">
+						<img src="img/7.jpg" alt="volunteer_1">
+					</div>
+
+					<div class="pics1">
+						<img src="img/10.jpg" alt="volunteer_2">
+					</div>
+
+					<a class="prev" onclick="dalsiPic(-1, 0)">&#10094;</a>
+		 		    <a class="next" onclick="dalsiPic(1, 0)">&#10095;</a>
+		 		</div>    
+	 		    <p>Donec ac nisl quis metus dapibus gravida vel ac nibh.</p>
+
+			</div>
+
+			<div class="interests-item">
+				<h3>Reading</h3>
+
+				<div class="interests-pics-cover">
+					<div class="pics2">
+						<img src="img/8.jpg" alt="reading_1">
+					</div>
+
+					<div class="pics2">
+						<img src="img/11.jpg" alt="reading_2">
+					</div>
+
+					<a class="prev" onclick="dalsiPic(-1, 1)">&#10094;</a>
+	  				<a class="next" onclick="dalsiPic(1, 1)">&#10095;</a>
+				</div>	
+
+				
+	  			<p>Curabitur sit amet cursus diam. Cras ornare eget mag.</p>
+			</div>
+
+
+			<div class="interests-item">
+				<h3>Sports</h3>
+				<div class="interests-pics-cover">
+					<div class="pics3">
+						<img src="img/9.jpg" alt="sport_1">
+					</div>
+
+					<div class="pics3">
+						<img src="img/12.jpg" alt="sport_2">
+					</div>
+					<a class="prev" onclick="dalsiPic(-1, 2)">&#10094;</a>
+		  			<a class="next" onclick="dalsiPic(1, 2)">&#10095;</a>
+		  		</div>
+
+	  			<p>Nulla imperdiet, purus eu vestibulum fermentum, lacus.</p>
+			</div>
+
+			<script>
+			var index = [1,1,1];
+			var id_obrazka = ["pics1", "pics2", "pics3"];
+			nacitaj_obrazok(1, 0);
+			nacitaj_obrazok(1, 1);
+			nacitaj_obrazok(1, 2);
+
+			function dalsiPic(n, no) {
+			  nacitaj_obrazok(index[no] += n, no);
+			}
+
+			function nacitaj_obrazok(n, no) {
+			  var i;
+			  var x = document.getElementsByClassName(id_obrazka[no]);
+			  if (n < 1) {index[no] = x.length}
+			  if (n > x.length) {index[no] = 1}    
+			  for (i = 0; i < x.length; i++) {
+			     x[i].style.display = "none";  
+			  }
+			  x[index[no]-1].style.display = "block";  
+			}
+			</script>
+
+			
+
+
+
+		</div>
+	</section>
+
+
+
+
+	<section id="abilities">
+		<div class="content">
+			<h2>Abilities</h2>
+
+			<div class="abilities-item" id="Skills">
+				<h3>Skills</h3>
+
+				<div class="abilities-subitem">
+					<ul>
+						<li>
+							<span class="abilities-text">Wordpress</span>
+							<span class="grouped-stars">
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+							</span>
+						</li>
+						<li>
+							<span class="abilities-text">Javascript</span>
+							<span class="grouped-stars">
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+							</span>
+						</li>
+						<li>
+							<span class="abilities-text">PHP</span>
+							<span class="grouped-stars">
+								<span class="star filled"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+							</span>
+						</li>
+						<li>
+							<span class="abilities-text">C</span>
+							<span class="grouped-stars">
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star"></span>
+							</span>
+						</li>
+						<li>
+							<span class="abilities-text">C++</span>
+							<span class="grouped-stars">
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+							</span>
+						</li>
+						<li>
+							<span class="abilities-text">JSON</span>
+							<span class="grouped-stars">
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+							</span>
+						</li>
+					</ul>
+				</div>
+
+
+				<div class="abilities-subitem">
+					<ul>
+						<li>
+							<span class="abilities-text">MySQL</span>
+							<span class="grouped-stars">
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+							</span>
+						</li>
+						<li>
+							<span class="abilities-text">CSS 3</span>
+							<span class="grouped-stars">
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star"></span>
+							</span>
+						</li>
+						<li>
+							<span class="abilities-text">Laravel Framework</span>
+							<span class="grouped-stars">
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+							</span>
+						</li>
+						<li>
+							<span class="abilities-text">Ruby</span>
+							<span class="grouped-stars">
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+							</span>
+						</li>
+						<li>
+							<span class="abilities-text">SASM</span>
+							<span class="grouped-stars">
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+							</span>
+						</li>
+						<li>
+							<span class="abilities-text">Bash</span>
+							<span class="grouped-stars">
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+							</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="abilities-item" id="Languages">
+				<h3>Languages</h3>
+
+				<div class="abilities-subitem">
+					<ul>
+						<li>
+							<span class="abilities-text">English</span>
+							<span class="grouped-stars">
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+							</span>
+						</li>
+						<li>
+							<span class="abilities-text">Czech</span>
+							<span class="grouped-stars">
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+							</span>
+						</li>
+						<li>
+							<span class="abilities-text">Slovak</span>
+							<span class="grouped-stars">
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+							</span>
+						</li>
+					</ul>
+				</div>
+
+				<div class="abilities-subitem">
+					<ul>
+						<li>
+							<span class="abilities-text">Spanish</span>
+							<span class="grouped-stars">
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+							</span>
+						</li>
+						<li>
+							<span class="abilities-text">Russian</span>
+							<span class="grouped-stars">
+								<span class="star filled"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+							</span>
+						</li>
+						<li>
+							<span class="abilities-text">German</span>
+							<span class="grouped-stars">
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star"></span>
+							</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="abilities-item" id="Tools">
+				<h3>Tools</h3>
+
+				<div class="abilities-subitem">
+					<ul>
+						<li>
+							<span class="abilities-text">Git</span>
+							<span class="grouped-stars">
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+							</span>
+						</li>
+						<li>
+							<span class="abilities-text">Adobe Premiere</span>
+							<span class="grouped-stars">
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+							</span>
+						</li>
+						<li>
+							<span class="abilities-text">Mac</span>
+							<span class="grouped-stars">
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+							</span>
+						</li>
+						<li>
+							<span class="abilities-text">Sketch</span>
+							<span class="grouped-stars">
+								<span class="star filled"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+							</span>
+						</li>
+						<li>
+							<span class="abilities-text">Windows</span>
+							<span class="grouped-stars">
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+							</span>
+						</li>
+						<li>
+							<span class="abilities-text">Notepad++</span>
+							<span class="grouped-stars">
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+							</span>
+						</li>	
+					</ul>
+				</div>
+
+				<div class="abilities-subitem">
+					<ul>
+						<li>
+							<span class="abilities-text">Sublime Text</span>
+							<span class="grouped-stars">
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+							</span>
+						</li>
+						<li>
+							<span class="abilities-text">Adobe Photoshop</span>
+							<span class="grouped-stars">
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+							</span>
+						</li>
+						<li>
+							<span class="abilities-text">MS Office</span>
+							<span class="grouped-stars">
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+							</span>
+						</li>
+						<li>
+							<span class="abilities-text">Linux Ubuntu</span>
+							<span class="grouped-stars">
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+							</span>
+						</li>
+						<li>
+							<span class="abilities-text">Opera</span>
+							<span class="grouped-stars">
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+							</span>
+						</li>
+						<li>
+							<span class="abilities-text">Safari</span>
+							<span class="grouped-stars">
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star filled"></span>
+								<span class="star"></span>
+							</span>
+						</li>	
+					</ul>
+				</div>
+			</div>	
+
+		</div>
+	</section>
+
+
+
+
+	<footer id="contact">
+		<div class="content">
+			<h2>Contact</h2>
+
+			<div class="contact-item">
+				<h3>"The capacity to learn is a gift; the ability to learn is a skill; the willingness to learn is a choice." -Brian Herbert</h3>
+			</div>
+
+			<div class="contact-item">
+				<ul>
+					<li> 
+						<a href="https://sk-sk.facebook.com/"> <img class="contact-icons" src="img/ic-1.png" alt="Facebook"> </a>
+						<a href="https://sk-sk.facebook.com/">Facebook</a> 
+					</li>
+					<li>
+						<a href="https://www.instagram.com/"> <img class="contact-icons" src="img/ic-2.png" alt="Instagram"> </a>
+						<a href="https://www.instagram.com/">Instagram</a>
+					</li>
+					<li>
+						<a href="https://signal.org/"> <img class="contact-icons" src="img/ic-3.png" alt="Signal"> </a>
+						<a href="https://signal.org/">Signal</a>
+					</li>
+					<li>
+						<a href="https://twitter.com/"> <img class="contact-icons" src="img/ic-4.png" alt="Twitter"> </a>
+						<a href="https://twitter.com/">Twitter</a>
+					</li>
+				</ul>
+			</div>
+			
+		</div>
+	</footer>
+
+
+
+
+	<div id="footer_note">
+		<div class="content">
+			<p>Used for educational purposes only.</p>
+		</div>
+	</div>	
+
+
+
+
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
